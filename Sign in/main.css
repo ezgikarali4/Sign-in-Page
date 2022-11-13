@@ -1,0 +1,98 @@
+body {
+  background-color: #4169e1;
+  font-family: "Space Grotesk", sans-serif;
+}
+.container {
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  height: 60%;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.form-container {
+  width: 60%;
+}
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+.type-2 {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s box-shadow;
+}
+.type-2:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+label input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ddd;
+  transition: 0.3s background-color; /* slight transition */
+}
+label span:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+label:hover span {
+  background-color: #ccc;
+}
+
+label input:checked ~ span {
+  background-color: #2eaadc;
+}
+label input:checked ~ span:after {
+  display: block;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #4169e1;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 100%;
+}
+form {
+  margin: 10px 0;
+}
